@@ -2,10 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffeb99; /* Warm sunflower-inspired yellow */
+    background-color: #add8e6; /* Light blue background */
     text-align: center;
-    background-image: url('sunflowers-pattern.jpg'); /* Add a beautiful sunflower pattern */
-    background-size: cover;
+    background-image: url('sunflowers-decor.png'); /* Sunflower decorations */
+    background-size: contain;
+    background-repeat: repeat;
     background-attachment: fixed;
 }
 
