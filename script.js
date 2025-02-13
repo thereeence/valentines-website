@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Create password popup dynamically
     const passwordPopup = document.createElement("div");
     passwordPopup.classList.add("password-popup");
     passwordPopup.innerHTML = `
@@ -12,31 +13,42 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     document.body.appendChild(passwordPopup);
 
+    // Select elements
     const loveLetter = document.getElementById("love-letter");
-    const envelope = document.querySelector(".letter-container");
+    const envelope = document.querySelector(".envelope-icon"); // Ensure correct envelope selection
+    const passwordInput = document.getElementById("passwordInput");
+    const passwordError = document.getElementById("password-error");
 
-    window.openLetter = function (event) {
-        event.stopPropagation(); // Prevents envelope click from affecting other elements
+    // Open password popup when envelope is clicked
+    envelope.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents unwanted propagation
         passwordPopup.style.display = "block";
-        setTimeout(() => passwordPopup.classList.add("show"), 10); // Smooth fade-in
-    };
+        passwordPopup.classList.add("show");
+    });
 
+    // Check password and unlock letter
     document.getElementById("unlockButton").addEventListener("click", function (event) {
         event.stopPropagation();
-        const password = document.getElementById("passwordInput").value.toLowerCase();
+        const password = passwordInput.value.toLowerCase().trim();
         if (password === "navy blue") {
-            passwordPopup.style.display = "none";
-            loveLetter.style.display = "block";
+            passwordPopup.style.display = "none"; // Hide password popup
+            loveLetter.style.display = "block"; // Show love letter
+            passwordInput.value = ""; // Clear input field
+            passwordError.textContent = ""; // Clear error message
         } else {
-            document.getElementById("password-error").textContent = "Incorrect password! Try again.";
+            passwordError.textContent = "❌ Incorrect password! Try again.";
         }
     });
 
+    // Close password popup
     document.getElementById("closePasswordPopup").addEventListener("click", function (event) {
         event.stopPropagation();
         passwordPopup.style.display = "none";
+        passwordInput.value = ""; // Clear input field
+        passwordError.textContent = ""; // Clear error message
     });
 
+    // Close love letter
     document.getElementById("closeLetterButton").addEventListener("click", function (event) {
         event.stopPropagation();
         loveLetter.style.display = "none";
