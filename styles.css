@@ -63,31 +63,39 @@ body {
 
 .hidden-letter {
     display: none;
-    position: absolute;
-    top: 120%;
+    position: fixed;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 250px;
+    transform: translate(-50%, -50%);
+    background: #fff3cd;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border: 5px solid #ffcc00;
+    font-family: 'Cursive', sans-serif;
+    z-index: 1000;
 }
 
 .hidden-letter p {
     margin: 0;
-    font-size: 16px;
-    color: #333;
+    font-size: 18px;
+    color: #5a3d1e;
+    font-weight: bold;
 }
 
 .hidden-letter button {
-    margin-top: 10px;
-    padding: 5px 10px;
+    margin-top: 15px;
+    padding: 10px 15px;
     border: none;
     background: #ff6b6b;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .hidden-letter button:hover {
