@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #add8e6; /* Light blue background */
+    text-align: center;
+}
+
+.hero {
+    background: url('sunflowers-bg.jpg') center/cover no-repeat;
+    padding: 100px 20px;
+    color: white;
+}
+
+.gallery {
+    padding: 20px;
+}
+
+.image-container img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.message {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+}
+
+.hero {
+    animation: moveBackground 10s linear infinite alternate;
+}
