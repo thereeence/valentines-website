@@ -19,10 +19,6 @@ body {
     padding: 20px;
 }
 
-.gallery h2 {
-    color: white; /* Turns 'Memories with You' white */
-}
-
 .image-container img {
     width: 200px;
     margin: 10px;
