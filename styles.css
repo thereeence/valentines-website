@@ -9,7 +9,7 @@ body {
 }
 
 .hero {
-    background: transparent; /* Remove conflicting background */
+    background: url('sunflowers-bg.jpg') center/cover no-repeat;
     padding: 100px 20px;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -17,6 +17,10 @@ body {
 
 .gallery {
     padding: 20px;
+}
+
+.gallery h2 {
+    color: white; /* Turns 'Memories with You' white */
 }
 
 .image-container img {
