@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             passwordInput.value = ""; // Clear input field
             passwordError.textContent = ""; // Clear error message
         } else {
-            passwordError.textContent = "❌ Incorrect password! Try again.";
+            passwordError.textContent = "❌ Kabaw!";
         }
     });
 
