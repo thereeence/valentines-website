@@ -1,24 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll(".image-container img");
-    images.forEach(img => {
-        img.style.opacity = 0;
-        setTimeout(() => { 
-            img.style.opacity = 1; 
-            img.style.transition = "opacity 1s ease-in"; 
-        }, 500);
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    const passwordPopup = document.createElement("div");
+    passwordPopup.classList.add("password-popup");
+    passwordPopup.innerHTML = `
+        <h2>🔒 Enter Password</h2>
+        <p>Hint: My favorite color</p>
+        <input type="text" id="passwordInput" placeholder="Type here..." />
+        <br>
+        <button onclick="checkPassword()">Unlock</button>
+    `;
+    document.body.appendChild(passwordPopup);
 
-    // Envelope pop-up functionality with password protection
-    window.openLetter = function() {
-        let password = prompt("Enter the password to open the letter (Hint: My favorite color)");
-        if (password && password.toLowerCase() === "navy blue") {
+    window.openLetter = function () {
+        passwordPopup.style.display = "block";
+        setTimeout(() => passwordPopup.classList.add("show"), 10); // Smooth fade-in
+    };
+
+    window.checkPassword = function () {
+        const password = document.getElementById("passwordInput").value.toLowerCase();
+        if (password === "navy blue") {
+            passwordPopup.style.display = "none";
             document.getElementById("love-letter").style.display = "block";
         } else {
             alert("Incorrect password! Try again.");
         }
-    };
-
-    window.closeLetter = function() {
-        document.getElementById("love-letter").style.display = "none";
     };
 });
