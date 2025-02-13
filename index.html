@@ -31,12 +31,25 @@
     <div class="message">
         <h2>A Love Note for You</h2>
         <div class="letter-container">
-            <img src="envelope.png" alt="Open Letter" class="envelope-icon" onclick="openLetter()">
-            <div id="love-letter" class="hidden-letter">
-                <p>Hi love, Happy Hearts Day! Ang swerte ko talaga to have you, as in ikaw yung pinaka best part ng life ko. Every moment with you is pure happiness. Thank you for loving me the way you do. Ikaw lang, always! I love you very very much my loveeey!💙🌻</p>
-                <button onclick="closeLetter()">Close</button>
-            </div>
+            <img src="envelope.png" alt="Open Letter" class="envelope-icon" id="envelope">
         </div>
+    </div>
+
+    <!-- Password Popup -->
+    <div id="password-popup" class="password-popup">
+        <h2>🔒 Enter Password</h2>
+        <p>Hint: My favorite color</p>
+        <input type="text" id="passwordInput" placeholder="Type here..." />
+        <br>
+        <button id="unlockButton">Unlock</button>
+        <button id="closePasswordPopup">Close</button>
+        <p id="password-error" style="color: red; font-weight: bold;"></p>
+    </div>
+
+    <!-- Love Letter Pop-up -->
+    <div id="love-letter" class="hidden-letter">
+        <p>Hi love, Happy Hearts Day! Ang swerte ko talaga to have you, as in ikaw yung pinaka best part ng life ko. Every moment with you is pure happiness. Thank you for loving me the way you do. Ikaw lang, always! I love you very very much my loveeey!💙🌻</p>
+        <button id="closeLetterButton">Close</button>
     </div>
     
     <script src="script.js"></script>
