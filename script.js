@@ -13,21 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     document.body.appendChild(passwordPopup);
 
-    // Select elements
+    // Select all necessary elements
     const loveLetter = document.getElementById("love-letter");
-    const envelope = document.querySelector(".envelope-icon"); // Ensure correct envelope selection
+    const envelope = document.querySelector(".envelope-icon"); 
+    const unlockButton = document.getElementById("unlockButton");
+    const closePasswordPopup = document.getElementById("closePasswordPopup");
+    const closeLetterButton = document.querySelector("#love-letter button"); // Select "Close" inside love letter
     const passwordInput = document.getElementById("passwordInput");
     const passwordError = document.getElementById("password-error");
 
-    // Open password popup when envelope is clicked
+    // Open password popup when clicking the envelope
     envelope.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevents unwanted propagation
+        event.stopPropagation();
         passwordPopup.style.display = "block";
         passwordPopup.classList.add("show");
     });
 
-    // Check password and unlock letter
-    document.getElementById("unlockButton").addEventListener("click", function (event) {
+    // Check password and unlock the letter
+    unlockButton.addEventListener("click", function (event) {
         event.stopPropagation();
         const password = passwordInput.value.toLowerCase().trim();
         if (password === "navy blue") {
@@ -41,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Close password popup
-    document.getElementById("closePasswordPopup").addEventListener("click", function (event) {
+    closePasswordPopup.addEventListener("click", function (event) {
         event.stopPropagation();
         passwordPopup.style.display = "none";
         passwordInput.value = ""; // Clear input field
@@ -49,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Close love letter
-    document.getElementById("closeLetterButton").addEventListener("click", function (event) {
+    closeLetterButton.addEventListener("click", function (event) {
         event.stopPropagation();
         loveLetter.style.display = "none";
     });
