@@ -53,7 +53,7 @@ body {
 }
 
 .envelope-icon {
-    width: 60px; /* Reduced size */
+    width: 80px; /* Increased size */
     transition: transform 0.3s ease-in-out;
 }
 
