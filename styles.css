@@ -3,6 +3,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #add8e6; /* Light blue background */
+    background-image: url('your-background-image.png'); /* Updated background with sunflower pattern */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures background moves while scrolling */
     text-align: center;
     position: relative;
     overflow-x: hidden;
@@ -11,22 +15,22 @@ body {
 /* Sunflower decorations */
 .sunflower-decor {
     position: absolute;
-    width: 80px;
+    width: 60px; /* Reduced size for better aesthetics */
     height: auto;
     z-index: -1;
 }
 
 /* Random placement of sunflowers */
-.sunflower1 { top: 5%; left: 10%; }
-.sunflower2 { top: 15%; right: 15%; }
-.sunflower3 { top: 25%; left: 30%; }
-.sunflower4 { top: 35%; right: 25%; }
-.sunflower5 { top: 45%; left: 50%; }
-.sunflower6 { top: 55%; right: 40%; }
-.sunflower7 { top: 65%; left: 20%; }
-.sunflower8 { top: 75%; right: 10%; }
-.sunflower9 { top: 85%; left: 60%; }
-.sunflower10 { top: 95%; right: 30%; }
+.sunflower1 { top: 5%; left: 12%; }
+.sunflower2 { top: 18%; right: 18%; }
+.sunflower3 { top: 30%; left: 25%; }
+.sunflower4 { top: 42%; right: 22%; }
+.sunflower5 { top: 50%; left: 55%; }
+.sunflower6 { top: 60%; right: 35%; }
+.sunflower7 { top: 70%; left: 18%; }
+.sunflower8 { top: 80%; right: 15%; }
+.sunflower9 { top: 88%; left: 58%; }
+.sunflower10 { top: 95%; right: 28%; }
 
 .hero {
     background: url('sunflowers-bg.jpg') center/cover no-repeat;
@@ -71,7 +75,7 @@ body {
 }
 
 .envelope-icon {
-    width: 90px; /* Slightly increased size */
+    width: 100px; /* Slightly increased size for better visibility */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -89,28 +93,28 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: 80%;
-    max-width: 500px;
+    width: 85%;
+    max-width: 550px;
     text-align: center;
     border: 5px solid #ffcc00;
     font-family: 'Cursive', sans-serif;
     z-index: 1000;
     background-image: url('sunflower-texture.jpg'); /* Subtle sunflower texture */
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .hidden-letter p {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     color: #5a3d1e;
     font-weight: bold;
 }
 
 .hidden-letter button {
     margin-top: 15px;
-    padding: 10px 15px;
+    padding: 12px 18px;
     border: none;
     background: #ff6b6b;
     color: white;
