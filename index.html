@@ -13,7 +13,6 @@
     <div class="gallery">
         <h2>Moments with You</h2>
         <div class="image-container">
-            <!-- Add your images here -->
             <img src="https://raw.githubusercontent.com/thereeence/valentines-website/main/photo1.jpg" alt="Our moment 1">
             <img src="https://raw.githubusercontent.com/thereeence/valentines-website/main/photo2.jpg" alt="Our moment 2">
             <img src="https://raw.githubusercontent.com/thereeence/valentines-website/main/photo3.jpg" alt="Our moment 3">
@@ -28,10 +27,18 @@
             <img src="https://raw.githubusercontent.com/thereeence/valentines-website/main/photo12.jpg" alt="Our moment 12">
         </div>
     </div>
+    
     <div class="message">
-        <h2>My Special Message for You</h2>
-        <p>Hi love, Happy Hearts Day! Ang swerte ko talaga to have you, as in ikaw yung pinaka best part ng life ko. Every moment with you is pure happiness. Thank you for loving me the way you do. Ikaw lang, always! I love you very very much!💙🌻</p> <!-- Replace with actual message -->
+        <h2>A Love Note for You</h2>
+        <div class="letter-container">
+            <img src="envelope.png" alt="Open Letter" class="envelope-icon" onclick="openLetter()">
+            <div id="love-letter" class="hidden-letter">
+                <p>Hi love, Happy Hearts Day! Ang swerte ko talaga to have you, as in ikaw yung pinaka best part ng life ko. Every moment with you is pure happiness. Thank you for loving me the way you do. Ikaw lang, always! I love you very very much!💙🌻</p>
+                <button onclick="closeLetter()">Close</button>
+            </div>
+        </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
