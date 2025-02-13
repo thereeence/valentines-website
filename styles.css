@@ -5,8 +5,8 @@ body {
     background-color: #add8e6; /* Light blue background */
     text-align: center;
     background-image: url('sunflowers-decor.png'); /* Sunflower decorations */
-    background-size: contain;
-    background-repeat: repeat;
+    background-size: 150px 150px; /* Smaller sunflower pattern */
+    background-repeat: repeat; /* Make it a pattern */
     background-attachment: fixed;
 }
 
