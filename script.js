@@ -6,11 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>Hint: My favorite color</p>
         <input type="text" id="passwordInput" placeholder="Type here..." />
         <br>
-        <button onclick="checkPassword(event)">Unlock</button>
-        <button onclick="closePasswordPopup(event)">Close</button>
+        <button id="unlockButton">Unlock</button>
+        <button id="closePasswordPopup">Close</button>
         <p id="password-error" style="color: red; font-weight: bold;"></p>
     `;
     document.body.appendChild(passwordPopup);
+
+    const loveLetter = document.getElementById("love-letter");
+    const envelope = document.querySelector(".letter-container");
 
     window.openLetter = function (event) {
         event.stopPropagation(); // Prevents envelope click from affecting other elements
@@ -18,24 +21,24 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => passwordPopup.classList.add("show"), 10); // Smooth fade-in
     };
 
-    window.checkPassword = function (event) {
+    document.getElementById("unlockButton").addEventListener("click", function (event) {
         event.stopPropagation();
         const password = document.getElementById("passwordInput").value.toLowerCase();
         if (password === "navy blue") {
             passwordPopup.style.display = "none";
-            document.getElementById("love-letter").style.display = "block";
+            loveLetter.style.display = "block";
         } else {
             document.getElementById("password-error").textContent = "Incorrect password! Try again.";
         }
-    };
+    });
 
-    window.closePasswordPopup = function (event) {
+    document.getElementById("closePasswordPopup").addEventListener("click", function (event) {
         event.stopPropagation();
         passwordPopup.style.display = "none";
-    };
+    });
 
-    window.closeLetter = function (event) {
+    document.getElementById("closeLetterButton").addEventListener("click", function (event) {
         event.stopPropagation();
-        document.getElementById("love-letter").style.display = "none";
-    };
+        loveLetter.style.display = "none";
+    });
 });
