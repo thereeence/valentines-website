@@ -110,3 +110,66 @@ body.blur {
 .hidden-letter button:hover {
     background: #ff4c4c;
 }
+
+/* Stylish password pop-up */
+.password-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border: 4px solid #ffcc00;
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Pop-up appears smoothly */
+.password-popup.show {
+    opacity: 1;
+}
+
+/* Password input field */
+.password-popup input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Glowing effect when focused */
+.password-popup input:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 10px #ffd700;
+}
+
+/* Submit button */
+.password-popup button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #ffcc00;
+    color: #5a3d1e;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+.password-popup button:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+}
