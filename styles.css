@@ -2,14 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #add8e6; /* Light blue background */
+    background-color: #ffeb99; /* Warm sunflower-inspired yellow */
     text-align: center;
+    background-image: url('sunflowers-pattern.jpg'); /* Add a beautiful sunflower pattern */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .hero {
     background: url('sunflowers-bg.jpg') center/cover no-repeat;
     padding: 100px 20px;
     color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .gallery {
@@ -21,18 +25,22 @@ body {
     margin: 10px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
+    border: 5px solid #ffcc00; /* Sunflower color border */
 }
 
 .image-container img:hover {
     transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .message {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     margin: 20px auto;
     width: 80%;
     border-radius: 10px;
+    border: 3px solid #ffcc00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes moveBackground {
@@ -77,6 +85,8 @@ body {
     border: 5px solid #ffcc00;
     font-family: 'Cursive', sans-serif;
     z-index: 1000;
+    background-image: url('sunflower-texture.jpg'); /* Subtle sunflower texture */
+    background-size: cover;
 }
 
 .hidden-letter p {
