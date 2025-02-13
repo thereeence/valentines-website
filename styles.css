@@ -4,12 +4,29 @@ body {
     padding: 0;
     background-color: #add8e6; /* Light blue background */
     text-align: center;
-    background-image: url('sunflowers-decor.png'); /* Sunflower decorations */
-    background-size: 80px 80px; /* Smaller sunflower pattern */
-    background-repeat: repeat; /* Make it a beautiful, balanced pattern */
-    background-position: center;
-    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
 }
+
+/* Sunflower decorations */
+.sunflower-decor {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    z-index: -1;
+}
+
+/* Random placement of sunflowers */
+.sunflower1 { top: 5%; left: 10%; }
+.sunflower2 { top: 15%; right: 15%; }
+.sunflower3 { top: 25%; left: 30%; }
+.sunflower4 { top: 35%; right: 25%; }
+.sunflower5 { top: 45%; left: 50%; }
+.sunflower6 { top: 55%; right: 40%; }
+.sunflower7 { top: 65%; left: 20%; }
+.sunflower8 { top: 75%; right: 10%; }
+.sunflower9 { top: 85%; left: 60%; }
+.sunflower10 { top: 95%; right: 30%; }
 
 .hero {
     background: url('sunflowers-bg.jpg') center/cover no-repeat;
@@ -43,15 +60,6 @@ body {
     border-radius: 10px;
     border: 3px solid #ffcc00;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-@keyframes moveBackground {
-    0% { background-position: 0 0; }
-    100% { background-position: 80px 80px; }
-}
-
-.hero {
-    animation: moveBackground 10s linear infinite alternate;
 }
 
 /* Envelope pop-up styles */
