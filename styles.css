@@ -43,3 +43,53 @@ body {
 .hero {
     animation: moveBackground 10s linear infinite alternate;
 }
+
+/* Envelope pop-up styles */
+.letter-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.envelope-icon {
+    width: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.envelope-icon:hover {
+    transform: scale(1.1);
+}
+
+.hidden-letter {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.hidden-letter p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.hidden-letter button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden-letter button:hover {
+    background: #ff4c4c;
+}
